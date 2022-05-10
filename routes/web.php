@@ -44,3 +44,5 @@ Route::get('/admin',[AdminHomeController::class,'index'])->name(name:'admin');
 Route::get('/admin/category',[AdminCategoryController::class,'index'])->name(name:'admin_category');
 Route::get('/admin/category/create',[AdminCategoryController::class,'create'])->name(name:'admin_category_create');
 Route::post('/admin/category/store',[AdminCategoryController::class,'store'])->name(name:'admin_category_store');
+Route::get('/admin/category/edit/{id}',[AdminCategoryController::class,'edit'])->name(name:'admin_category_edit');
+Route::post('/admin/category/update/{id}',[AdminCategoryController::class,'update'])->name(name:'admin_category_update');

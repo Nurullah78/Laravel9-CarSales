@@ -11,7 +11,7 @@
         <section class="content-header">
             <div class="row">
                 <div class="col-sm-12">
-                    <h1>Category List</h1>
+                    <a href="/admin/category/create" class="btn btn-block btn-success btn-sm" style="width: 200px">Add Category</a>
                 </div>
             </div>
         </section>

@@ -56,9 +56,10 @@
                                     <td>{{$rs->description}}</td>
                                     <td>{{$rs->image}}</td>
                                     <td>{{$rs->status}}</td>
-                                    <td><a href="/admin/category/edit/{{$rs->id}}/" class="btn btn-block btn-info btn-fw">Edit</a></td>
-                                    <td><a href="/admin/category/delete/{{$rs->id}}/" class="btn btn-block btn-danger btn-fw">Delete</a></td>
-                                    <td><a href="/admin/category/show/{{$rs->id}}/" class="btn btn-block btn-success btn-fw">Show</a></td>
+                                    <td><a href="/admin/category/edit/{{$rs->id}}/" class="btn btn-block btn-info btn-fw">Edit</a>  </td>
+                                    <td><a href="/admin/category/destroy/{{$rs->id}}/" class="btn btn-block btn-danger btn-fw"
+                                        onclick="return confirm('Deleting !! Are you sure ?')">Delete</a>    </td>
+                                    <td><a href="/admin/category/show/{{$rs->id}}/" class="btn btn-block btn-success btn-fw">Show</a>   </td>
                                 </tr>
                             @endforeach
                             </tbody>

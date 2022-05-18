@@ -30,7 +30,7 @@
                     </p>
 
                     <!-- Form Start -->
-                    <form class="forms-sample" action="/admin/category/store" method="post">
+                    <form role="form" action="{{route('admin.category.store')}}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
                             <label for="exampleInputTitle1">Title</label>
@@ -51,11 +51,9 @@
                             <label>Image</label>
                             <input type="file" name="img[]" class="file-upload-default">
                             <div class="input-group col-xs-12">
-                                <input type="file" class="form-control file-upload-info" name="image" placeholder="Upload Image">
+                                <input type="file" class="form-control file-upload-info" name="image"
+                                       placeholder="Upload Image">
                                 <label class="custom-file-label" for="exampleInputFile"></label>
-                                <span class="input-group-append">
-                                    <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
-                                </span>
                             </div>
                         </div>
 

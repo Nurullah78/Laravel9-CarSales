@@ -6,17 +6,22 @@
                 <span class="menu-title">Dashboard</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link collapsed" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+            <a class="nav-link collapsed" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false"
+               aria-controls="ui-basic">
                 <i class="menu-icon mdi mdi-dropbox"></i>
                 <span class="menu-title">Order</span>
                 <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="ui-basic" style="">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/buttons.html">New Orders</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/dropdowns.html">Accepted Orders</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/typography.html">Shipping Orders</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/typography.html">Completed Orders</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../pages/ui-features/buttons.html">New Orders</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="../../pages/ui-features/dropdowns.html">Accepted
+                            Orders</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../pages/ui-features/typography.html">Shipping
+                            Orders</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../pages/ui-features/typography.html">Completed
+                            Orders</a></li>
                 </ul>
             </div>
         </li>

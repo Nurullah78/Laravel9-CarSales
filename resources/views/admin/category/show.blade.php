@@ -11,10 +11,13 @@
         <section class="content-header">
             <div class="row">
                 <div class="col-sm-6">
-                    <a href="/admin/category/edit/{{$data->id}}" class="btn btn-block btn-dark btn-sm" style="width: 150px">Edit Category</a>
+                    <a href="{{route('admin.category.edit',['id'=>$data->id])}}" class="btn btn-block btn-dark btn-sm"
+                       style="width: 150px">Edit Category</a>
                 </div>
                 <div class="col-sm-6">
-                    <a href="/admin/category/destroy/{{$data->id}}" onclick="return confirm('Deleting !! Are you sure ?')" class="btn btn-block btn-danger btn-sm" style="width: 150px">Delete Category</a>
+                    <a href="{{route('admin.category.destroy',['id'=>$data->id])}}"
+                       onclick="return confirm('Deleting !! Are you sure ?')" class="btn btn-block btn-danger btn-sm"
+                       style="width: 150px">Delete Category</a>
                 </div>
             </div>
         </section>
@@ -34,31 +37,31 @@
                             <table class="table table-bordered">
 
                                 <tr>
-                                    <th style="width: 150px"> Id </th>
+                                    <th style="width: 150px"> Id</th>
                                     <td> {{$data->id}} </td>
                                 </tr>
                                 <tr>
-                                    <th> Title </th>
+                                    <th> Title</th>
                                     <td> {{$data->title}} </td>
                                 </tr>
                                 <tr>
-                                    <th> Keywords </th>
+                                    <th> Keywords</th>
                                     <td> {{$data->keywords}} </td>
                                 </tr>
                                 <tr>
-                                    <th> Image </th>
-                                    <td> </td>
+                                    <th> Image</th>
+                                    <td></td>
                                 </tr>
                                 <tr>
-                                    <th> Status </th>
+                                    <th> Status</th>
                                     <td> {{$data->status}} </td>
                                 </tr>
                                 <tr>
-                                    <th> Created Date </th>
+                                    <th> Created Date</th>
                                     <td> {{$data->created_at}} </td>
                                 </tr>
                                 <tr>
-                                    <th> Update Date </th>
+                                    <th> Update Date</th>
                                     <td> {{$data->updated_at}} </td>
                                 </tr>
 

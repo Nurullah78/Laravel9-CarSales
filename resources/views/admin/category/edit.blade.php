@@ -30,21 +30,28 @@
                     </p>
 
                     <!-- Form Start -->
-                    <form role="form" action="{{route('admin.category.update',['id'=>$data->id])}}" method="post" enctype="multipart/form-data">
+                    <form role="form" action="{{route('admin.category.update',['id'=>$data->id])}}" method="post"
+                          enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
                             <label for="exampleInputTitle1">Title</label>
-                            <input type="text" class="form-control" name="title" value="{{$data->title}}">
+                            <label>
+                                <input type="text" class="form-control" name="title" value="{{$data->title}}">
+                            </label>
                         </div>
 
                         <div class="form-group">
                             <label for="exampleInputTitle1">Keywords</label>
-                            <input type="text" class="form-control" name="keywords" value="{{$data->keywords}}">
+                            <label>
+                                <input type="text" class="form-control" name="keywords" value="{{$data->keywords}}">
+                            </label>
                         </div>
 
                         <div class="form-group">
                             <label for="exampleInputTitle1">Description</label>
-                            <input type="text" class="form-control" name="description" value="{{$data->description}}">
+                            <label>
+                                <input type="text" class="form-control" name="description" value="{{$data->description}}">
+                            </label>
                         </div>
 
                         <div class="form-group">
@@ -59,11 +66,13 @@
 
                         <div class="form-group">
                             <label for="exampleFormControlSelect2">Status</label>
-                            <select class="form-control" name="status">
-                                <option selected>{{$data->status}}</option>
-                                <option>Enable</option>
-                                <option>Disable</option>
-                            </select>
+                            <label>
+                                <select class="form-control" name="status">
+                                    <option selected>{{$data->status}}</option>
+                                    <option>Enable</option>
+                                    <option>Disable</option>
+                                </select>
+                            </label>
                         </div>
 
                         <button type="submit" class="btn btn-primary me-2">Update</button>

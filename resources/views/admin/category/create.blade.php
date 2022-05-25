@@ -30,21 +30,28 @@
                     </p>
 
                     <!-- Form Start -->
-                    <form role="form" action="{{route('admin.category.store')}}" method="post" enctype="multipart/form-data">
+                    <form role="form" action="{{route('admin.category.store')}}" method="post"
+                          enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
                             <label for="exampleInputTitle1">Title</label>
-                            <input type="text" class="form-control" name="title" placeholder="Title">
+                            <label>
+                                <input type="text" class="form-control" name="title" placeholder="Title">
+                            </label>
                         </div>
 
                         <div class="form-group">
                             <label for="exampleInputTitle1">Keywords</label>
-                            <input type="text" class="form-control" name="keywords" placeholder="Keywords">
+                            <label>
+                                <input type="text" class="form-control" name="keywords" placeholder="Keywords">
+                            </label>
                         </div>
 
                         <div class="form-group">
                             <label for="exampleInputTitle1">Description</label>
-                            <input type="text" class="form-control" name="description" placeholder="Description">
+                            <label>
+                                <input type="text" class="form-control" name="description" placeholder="Description">
+                            </label>
                         </div>
 
                         <div class="form-group">
@@ -59,10 +66,12 @@
 
                         <div class="form-group">
                             <label for="exampleFormControlSelect2">Status</label>
-                            <select class="form-control" name="status">
-                                <option>Enable</option>
-                                <option>Disable</option>
-                            </select>
+                            <label>
+                                <select class="form-control" name="status">
+                                    <option>Enable</option>
+                                    <option>Disable</option>
+                                </select>
+                            </label>
                         </div>
 
                         <button type="submit" class="btn btn-primary me-2">Save</button>

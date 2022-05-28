@@ -20,69 +20,89 @@
         <section class="content">
 
             <!-- Default Box -->
-            <div class="card">
+            <div class="col-md-11 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
 
-                <div class="card-body">
+                        <h3 class="card-title">Category Elements </h3>
+                        <p class="card-description">
+                            Add Category form layout
+                        </p>
 
-                    <h3 class="card-title">Category Elements </h3>
-                    <p class="card-description">
-                        Add Category form layout
-                    </p>
+                        <!-- Form Start -->
+                        <form role="form" action="{{route('admin.category.store')}}" method="post"
+                              enctype="multipart/form-data">
+                            @csrf
 
-                    <!-- Form Start -->
-                    <form role="form" action="{{route('admin.category.store')}}" method="post"
-                          enctype="multipart/form-data">
-                        @csrf
-                        <div class="form-group">
-                            <label for="exampleInputTitle1">Title</label>
-                            <label>
-                                <input type="text" class="form-control" name="title" placeholder="Title">
-                            </label>
-                        </div>
+                            <div class="form-group">
 
-                        <div class="form-group">
-                            <label for="exampleInputTitle1">Keywords</label>
-                            <label>
-                                <input type="text" class="form-control" name="keywords" placeholder="Keywords">
-                            </label>
-                        </div>
+                                <label>Parent Category</label>
 
-                        <div class="form-group">
-                            <label for="exampleInputTitle1">Description</label>
-                            <label>
-                                <input type="text" class="form-control" name="description" placeholder="Description">
-                            </label>
-                        </div>
+                                <label>
+                                    <select class="form-control select2" name="parent_id" style="color: purple">
+                                        <option value="0" selected="selected">Main Category</option>
+                                        @foreach($data as $rs)
+                                            <option
+                                                value="{{$rs->id}}">{{\App\Http\Controllers\AdminPanel\CategoryController::getParentsTree($rs, $rs->title)}}</option>
+                                        @endforeach
+                                    </select>
+                                </label>
 
-                        <div class="form-group">
-                            <label>Image</label>
-                            <input type="file" name="img[]" class="file-upload-default">
-                            <div class="input-group col-xs-12">
-                                <input type="file" class="form-control file-upload-info" name="image"
-                                       placeholder="Upload Image">
-                                <label class="custom-file-label" for="exampleInputFile"></label>
                             </div>
-                        </div>
 
-                        <div class="form-group">
-                            <label for="exampleFormControlSelect2">Status</label>
-                            <label>
-                                <select class="form-control" name="status">
-                                    <option>Enable</option>
-                                    <option>Disable</option>
-                                </select>
-                            </label>
-                        </div>
+                            <div class="form-group">
+                                <label for="exampleInputTitle1">Title</label>
+                                <label>
+                                    <input type="text" class="form-control" name="title" placeholder="Title">
+                                </label>
+                            </div>
 
-                        <button type="submit" class="btn btn-primary me-2">Save</button>
+                            <div class="form-group">
+                                <label for="exampleInputTitle1">Keywords</label>
+                                <label>
+                                    <input type="text" class="form-control" name="keywords" placeholder="Keywords">
+                                </label>
+                            </div>
 
-                        <button class="btn btn-light">Cancel</button>
+                            <div class="form-group">
+                                <label for="exampleInputTitle1">Description</label>
+                                <label>
+                                    <input type="text" class="form-control" name="description"
+                                           placeholder="Description">
+                                </label>
+                            </div>
 
-                    </form>
-                    <!-- /.form -->
+                            <div class="form-group">
+                                <label>Image</label>
+                                <input type="file" name="img[]" class="file-upload-default">
+                                <div class="input-group col-xs-12">
+                                    <input type="file" class="form-control file-upload-info" name="image"
+                                           placeholder="Upload Image">
+                                    <label class="custom-file-label" for="exampleInputFile"></label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect2">Status</label>
+                                <label>
+                                    <select class="form-control" name="status">
+                                        <option>Enable</option>
+                                        <option>Disable</option>
+                                    </select>
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary me-2">Save</button>
+
+                            <button class="btn btn-light">Cancel</button>
+
+                        </form>
+                        <!-- /.form -->
+
+                    </div>
+                    <!-- /.card-body -->
 
                 </div>
-                <!-- /.card-body -->
 
             </div>
             <!-- /.card -->

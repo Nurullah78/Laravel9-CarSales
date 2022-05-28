@@ -22,6 +22,7 @@
             <!-- Default Box -->
             <div class="col-md-11 grid-margin stretch-card">
                 <div class="card">
+
                     <div class="card-body">
 
                         <h3 class="card-title">Category Elements </h3>
